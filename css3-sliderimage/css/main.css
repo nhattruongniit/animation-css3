@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.slider {
+    height: 345px;
+    overflow: hidden;
+}
+
+.slider img {
+    float: left;
+    width: 540px;
+    height: 100%;
+}
+
+.slider .child {
+    float: left;
+    height: 100%;
+}
+
+.effect1 {
+    animation: slider1 30s linear 1s infinite forwards;
+}
+
+.effect2 {
+    animation: slider2 50s linear 1s infinite forwards;
+}
+
+@keyframes slider1 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes slider2 {
+    0% {
+        transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0%, 0, 0);
+    }
+}

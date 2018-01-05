@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CSS Slider image</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+    <div class="slider">
+        <div class="child effect1">
+            <img src="images/1.jpg" alt="" />
+            <img src="images/2.jpg" alt="" />
+            <img src="images/3.jpg" alt="" />
+            <img src="images/4.jpg" alt="" />
+            <img src="images/5.jpg" alt="" />
+            <img src="images/1.jpg" alt="" />
+            <img src="images/2.jpg" alt="" />
+            <img src="images/3.jpg" alt="" />
+            <img src="images/4.jpg" alt="" />
+            <img src="images/5.jpg" alt="" />
+        </div>
+    </div>
+    <div class="slider">
+        <div class="child effect2">
+            <img src="images/1.jpg" alt="" />
+            <img src="images/2.jpg" alt="" />
+            <img src="images/3.jpg" alt="" />
+            <img src="images/4.jpg" alt="" />
+            <img src="images/5.jpg" alt="" />
+            <img src="images/1.jpg" alt="" />
+            <img src="images/2.jpg" alt="" />
+            <img src="images/3.jpg" alt="" />
+            <img src="images/4.jpg" alt="" />
+            <img src="images/5.jpg" alt="" />
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var slider = $('.slider');
+            var widthImg = $('img').width();
+            var length = $('.slider img').length;
+
+            slider.width(widthImg * length);
+        });
+    </script>
+</body>
+
+</html>
