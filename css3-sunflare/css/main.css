@@ -64,7 +64,7 @@ body {}
     top: 0px;
     font-size: 0;
     display: block;
-    -webkit-transform: scaleX(0.33);
+    transform: scaleX(0.33);
     border-radius: 100%;
     background: url(../images/bokeh1.png) no-repeat center center;
     background-size: 100% auto;

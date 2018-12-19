@@ -1,0 +1,15 @@
+button{
+    width:350px;
+    height:75px;
+    font-size:30px;
+    border:0px;
+    color:#fff;
+    box-shadow: 2px 5px 5px #000;
+    border-radius:10px;
+    outline:none;
+    transition:.3s all;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    background:#68228b;
+}
