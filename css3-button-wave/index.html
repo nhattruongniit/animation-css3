@@ -10,19 +10,22 @@
 </head>
 
 <body>
-    <button id="button">Button ripple!</button>
+    <button id="button">
+        Button ripple!
+    </button>
 
     <script type="text/javascript">
         var button = document.getElementById('button');
         button.addEventListener('click', function(e) {
-            let ripple = document.createElement('div');
-            ripple.classList.add('wave');
-            ripple.style.top = e.clientY - button.offsetTop + 'px';
-            ripple.style.left = e.clientX - button.offsetLeft + 'px';
-            button.removeChild(document.getElementsByClassName('wave')[0]);
-
-            console.log(e.clientX, e.clientY);
-            console.log(e.clientX - button.offsetLeft, e.clientY - button.offsetTop)
+            let x = event.clientX - event.target.offsetLeft;
+            let y = event.clientY - event.target.offsetTop;
+            let rippleElement = document.createElement('span');
+            rippleElement.style.left = x + 'px';
+            rippleElement.style.top = y + 'px';
+            this.appendChild(rippleElement);
+            setTimeout(function () {
+                rippleElement.remove();
+            }, 500);
         })
     </script>
 </body>

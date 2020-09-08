@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #000;
+    font-family: Myriad Pro;
+    color:#FFF;
+    font-size: 16px;
+    height: auto !important;
+}
+.introduction {
+    background-color: #f7f7f7;
+    max-width: 95%;
+    width: 1024px;
+    height: 500px;
+    color:#000;
+    margin: 0 auto;
+}
+.hero-title {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 1;
+    z-index: 3;
+}
+.cross-slider {
+    display: block;
+    z-index: 2;
+    overflow: hidden;
+    height: 75vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.cross-slider.portrait {
+    opacity: 1;
+}
+.sliderBanner{
+    opacity: 1;
+}
+.cross-slider.portrait .slide {
+    height: 100%;
+    width: 120%;
+    display: block;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
+    -moz-transform: translate3d(100%,0,0);
+    -o-transform: translate3d(100%,0,0);
+    -ms-transform: translate3d(100%,0,0);
+    animation: cross_slide 32s linear infinite;
+    -webkit-animation: cross_slide 32s linear infinite;
+    -moz-animation: cross_slide 32s linear infinite;
+    -o-animation: cross_slide 32s linear infinite;
+    -ms-animation: cross_slide 32s linear infinite;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: 0px 0px;
+}
+.cross-slider.portrait .slide  img{
+    width:100%;
+}
+.cross-slider.portrait #slide-row-1 {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    animation-delay: 0s;
+    background-image: url(../images/01.jpg);
+}
+.cross-slider.portrait #slide-row-2 {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s;
+    background-image: url(../images/02.jpg);
+}
+.cross-slider.portrait #slide-row-3 {
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;
+    -o-animation-delay: 16s;
+    -ms-animation-delay: 16s;
+    animation-delay: 16s;
+    background-image: url(../images/03.jpg);
+}
+.cross-slider.portrait #slide-row-4 {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+    background-image: url(../images/04.jpg);
+}
+
+@-webkit-keyframes cross_slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+        -moz-transform: translate3d(0, 0, 0) scale(1);
+        -o-transform: translate3d(0, 0, 0) scale(1);
+        -ms-transform: translate3d(0, 0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 1;
+    }
+    43% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(-50%, 0, 0) scale(1.5);
+        -moz-transform: translate3d(-50%, 0, 0) scale(1.5);
+        -o-transform: translate3d(-50%, 0, 0) scale(1.5);
+        -ms-transform: translate3d(-50%, 0, 0) scale(1.5);
+        transform: translate3d(-50%, 0, 0) scale(1.5);
+    }
+}
+@media screen and (max-width: 1440px){  
+    .hero-title{
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero-title {
+        height: 50vh;
+    }  
+} 
+
+@media screen and (max-width: 450px){
+    .hero-title {
+        height: 35vh;
+    }  
+} 
